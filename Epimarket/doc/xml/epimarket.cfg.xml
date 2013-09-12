@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<orm>
+	<orm-configuration>
+    	<property name="orm.connection.driver_class" value="com.mysql.jdbc.Driver" />
+    	<property name="orm.connection.url" value="jdbc:mysql://localhost:3306/epimarket" />
+    	<property name="orm.connection.username" value="root" />
+    	<property name="orm.connection.password" value="b*b|eVR+" />
+	</orm-configuration>
+	<orm-mapping>
+		<class package="fr.epimarket.model.Category" table="category" idautoincrement="yes" >
+			<property name="name" column="name" typename="String" typecolumn="VARCHAR" length="255" />
+		</class>
+		<class name="fr.epimarket.model.Client" table="client" idautoincrement="yes">
+			<property name="login" column="login" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="password" column="password" typename="String" typecolumn="CHAR" length="255" />
+			<property name="lastName" column="lastName" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="firstName" column="firstName" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="sexe" column="sexe" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="email" column="email" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="phone" column="phone" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="streetNumber" column="streetNumber" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="streetName" column="streetName" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="city" column="city" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="zipCode" column="zipCode" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="country" column="country" typename="String" typecolumn="VARCHAR" length="255" />
+		</class>
+		<class name="fr.epimarket.model.Product" table="product" idautoincrement="yes" >
+			<property name="categoryId" column="categoryId" typename="Integer" typecolumn="INT" length="NULL" />
+			<property name="designation" column="designation" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="price" column="price" typename="Integer" typecolumn="INT" length="NULL" />
+			<property name="description" column="description" typename="String" typecolumn="VARCHAR" length="255" />
+			<many-to-one parent="product" name="category" column="categoryId" class="Category" />
+		</class>
+		<class name="fr.epimarket.model.Orderline" table="orderline" idautoincrement="yes" >
+			<property name="clientId" column="clientId" typename="Integer" typecolumn="INT" length="NULL" />
+			<property name="productId" column="productId" typename="Integer" typecolumn="INT" length="NULL" />
+			<property name="quantity" column="quantity" typename="Integer" typecolumn="INT" length="NULL" />
+			<property name="status" column="status" typename="String" typecolumn="VARCHAR" length="255" />
+			<property name="date" column="date" typename="String" typecolumn="VARCHAR" length="255" />
+			<many-to-one parent="orderline" name="client" column="clientId" class="Client" />
+			<many-to-one parent="orderline" name="product" column="productId" class="Product" />
+		</class>
+	</orm-mapping>
+</orm>

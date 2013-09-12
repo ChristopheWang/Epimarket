@@ -1,0 +1,42 @@
+@CHARSET "ISO-8859-1";
+
+body
+{
+	text-align:			center;
+}
+
+body
+{
+	text-align:			-moz-center;
+	background-image:	url('images/fond.png');
+	font-family: 		Georgia, Arial, sans-serif;
+    color: 				#181818;
+}
+
+.Header
+{
+	font-family: 		Georgia, serif;
+    font-size: 			4em;
+    font-weight: 		normal;
+}
+
+.Menu, .Produit, .Panier
+{
+	vertical-align: 	top;
+	text-align:			center;
+}
+
+#MenuForm
+{
+	text-align:			left;
+}
+
+#OrderFailed
+{	
+	color: 				red;
+}
+
+#OrderDone
+{	
+	color: 				green;
+}
