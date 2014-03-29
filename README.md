@@ -1,7 +1,9 @@
-Epimarket Project
-E-Commerce Website in Java JSF Language
+Epimarket
+=========
 
-Epitech 3 Project
+E-Commerce Website with Java JSF/Servlet
+
+Epitech Project (http://www.epitech.eu)
 
 Sujet : Site web 
 Objectif : Travailler les technos Java JSF, et donc le dev web MVC2.
