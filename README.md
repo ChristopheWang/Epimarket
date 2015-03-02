@@ -1,26 +1,9 @@
 Epimarket
 =========
 
-E-Commerce Website with Java JSF/Servlet
-
-Epitech Project (http://www.epitech.eu)
-
-Sujet : Site web 
-Objectif : Travailler les technos Java JSF, et donc le dev web MVC2.
-Serveur : Tomcat 7 ou n'importe quel autre container web java.
-Description : Développer un site web commercial en ligne, le choix des produits
-(et autres problématiques métiers) est libre.
-Points Obligatoires :
-- 100% technos web JSF java (donc MyFaces Tomahawk, SandBox, etc...)
-- Intégrer un framework de statistiques (ex: JFreeChart et composants ChartCreator).
-- Gérer du reporting PDF (par exemple les commandes, ou bien les stats).
-- Intégrer la Facade ORM, afin d'assurer les échanges avec la base de données.
-- Avoir un modèle de données clair et coordonné avec les problématiques métiers !
-- Doit être compatible avec la majorité des browsers du marché.
-- Doit gérer les sessions users, un panier virtuel, une phase de login avec des rôles, une 
-interface d’administration, …
-Points optionnels :
-- tout ce qui vous passe par la tête ...
-Remarque: 
--Ce n’est pas un projet sur le Design Web (genre CSS et logo en flame), cette partie n’est 
-donc pas la plus importante en soit…
+E-Commerce website using Java JSF/Servlet
+-Server: Apache Tomcat 7
+-Java JSF (MyFaces, Tomahawk, Sandbox ...)
+-Stats framework (JFreeChart)
+-ORM interface for database queries
+-Compatibility with recents Browsers
